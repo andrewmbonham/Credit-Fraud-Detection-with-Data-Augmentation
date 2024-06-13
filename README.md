@@ -1,6 +1,8 @@
 # Credit-Fraud-Detection-with-Data-Augmentation
 ***
 
+***
+
 ## Task
 The task here is to build and train prediction models 
 for credit fraud detection using highly unbalanced data. 
@@ -11,12 +13,14 @@ The problem was solved by using four different ML models:
 - `RandomForestClassifier`
 - `SVC`
 - `GradientBoostingClassifier`
-all of which are from sklearn. Due to the unbalanced nature 
+
+all of which are from `sklearn`. Due to the unbalanced nature 
 of the data, four datasets were used:
 - control (uniformly sampled)
 - SMOTE augmented 
 - ADASYN augmented 
 - GAN augmented 
+
 SMOTE and ADASYN were implemented from the imblearn package, 
 while the GAN was a custom PyTorch implementation. Each model 
 was trained on each dataset. Metrics recorded were 
@@ -25,6 +29,7 @@ was trained on each dataset. Metrics recorded were
 - f1 score 
 - accuracy 
 - area under ROC curve 
+
 All models were saved after training for reproduceability. 
 
 ## Installation
@@ -34,6 +39,7 @@ The following Python 3 packages are required:
 - `pytorch` 
 - `sklearn` 
 - `pickle` 
+
 To install each package, simply run `pip install <package>` in 
 a Jupyter cell. 
 
@@ -44,7 +50,13 @@ contains the generation, training, and evaluation with the
 augmented datasets. In either notebook, simply run all cells to 
 view the generation of the synthetic data and/or the evaluation 
 of the models. Keeping the models files in the same directory will 
-lead to 
+lead to the pretrained models being loaded and evaluated, saving 
+time. To retrain, simply move or rename the models files. To train 
+on new data, you will also need to either replace the `creditcard.csv`
+file or introduce a new file and change the `file_name` variable at 
+the beginning of the respective notebook. Model parameters can be
+adjusted from the `foolfraud.py` file and will lead to corresponding
+changes in training and evaluation time, as well as model performance.
 
 ### The Core Team
 Andrew Bonham
