@@ -1,8 +1,6 @@
 # Credit-Fraud-Detection-with-Data-Augmentation
 ***
 
-***
-
 ## Task
 The task here is to build and train prediction models 
 for credit fraud detection using highly unbalanced data. 
